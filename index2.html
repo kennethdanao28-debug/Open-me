@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Pyang!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #ff6b81;
+      margin-bottom: 0.5em;
+      animation: bounce 2s infinite;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 1em;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 50px;
+      height: 70px;
+      background-color: #ff6b81;
+      border-radius: 50% 50% 50% 50%;
+      animation: floatUp 6s infinite;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 40px;
+      background-color: #555;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 70px;
+    }
+
+    @keyframes floatUp {
+      0% { bottom: -150px; transform: translateX(0) rotate(0deg); }
+      50% { transform: translateX(20px) rotate(15deg); }
+      100% { bottom: 100vh; transform: translateX(-20px) rotate(-15deg); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .surprise-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #ff6b81;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-bottom: 1em;
+    }
+
+    .surprise-button:hover {
+      background-color: #ff9a9e;
+      transform: scale(1.1);
+    }
+
+    .hidden-message {
+      display: none;
+      font-size: 1.1rem;
+      color: #ff3e6c;
+      margin-top: 1em;
+      line-height: 1.6;
+    }
+
+    img.birthday-photo {
+      max-width: 300px;
+      border-radius: 20px;
+      margin-top: 1em;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>Happy Birthday, Pyang! 🎉</h1>
+    <p>Wishing you a day full of joy and laughter! 💖</p>
+
+    <button class="surprise-button" onclick="showMessage()">Click for a surprise!</button>
+
+    <p class="hidden-message" id="surprise">
+      How can I say this? Oh wait, I can't because no exact words can ever make me express the friendship we've created in the last 2 years. It is filled with different memories for us to cherish. Okay2 nice na akong English no? Hahahahaha. <br><br>
+      Btw, Pyang, since 19 nmn ka, pag amping ha, basig last bday na ni nimo, and I know you have your ups and downs, but remember to focus on the ups para diretso kay Lord na. Kana lang ya. Enjoy sa buda! Sumbong tka kay tita 🙂 
+    </p>
+
+  <!-- Balloons -->
+  <div class="balloon" style="left: 10%; background-color: #ff6b81;"></div>
+  <div class="balloon" style="left: 25%; background-color: #ffb347;"></div>
+  <div class="balloon" style="left: 40%; background-color: #ff6f91;"></div>
+  <div class="balloon" style="left: 55%; background-color: #ffcc70;"></div>
+  <div class="balloon" style="left: 70%; background-color: #ff6b81;"></div>
+  <div class="balloon" style="left: 85%; background-color: #ffb347;"></div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('surprise').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
